@@ -1,29 +1,9 @@
 {
-  "branchPrefix": "test-renovate/",
-  "dryRun": "full",
-  "username": "renovate-release",
-  "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
-  "onboarding": false,
-  "platform": "github",
-  "forkProcessing": "enabled",
-  "repositories": [
-    "renovatebot/github-action",
-    "renovate-tests/cocoapods1",
-    "renovate-tests/gomod1"
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices"
   ],
-  "packageRules": [
-    {
-      "description": "lockFileMaintenance",
-      "matchUpdateTypes": [
-        "pin",
-        "digest",
-        "patch",
-        "minor",
-        "major",
-        "lockFileMaintenance"
-      ],
-      "dependencyDashboardApproval": false,
-      "minimumReleaseAge": "1 day"
-    }
-  ]
+  "enabledManagers": [
+    "asdf"
+  ],
 }
